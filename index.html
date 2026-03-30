@@ -74,13 +74,13 @@
         }
 
         .content-section {
-            padding: 40px 20px;
+            padding: 30px 15px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .section-title {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--accent-gold);
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -89,10 +89,11 @@
             padding-left: 15px;
         }
 
+        /* AJUSTE PARA DOIS JOGOS LADO A LADO */
         .roms-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(2, 1fr); /* Força 2 colunas */
+            gap: 15px;
             margin-bottom: 50px;
         }
 
@@ -104,6 +105,8 @@
             transition: transform 0.3s, border-color 0.3s;
             text-decoration: none;
             color: inherit;
+            display: flex;
+            flex-direction: column;
         }
 
         .rom-card:hover {
@@ -115,18 +118,20 @@
             width: 100%;
             aspect-ratio: 1/1;
             background: #222;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             object-fit: cover;
+            display: block;
         }
 
         .rom-info {
-            padding: 12px;
+            padding: 10px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .rom-title {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 600;
             margin-bottom: 5px;
             display: block;
@@ -136,24 +141,25 @@
         }
 
         .rom-tag {
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             background: rgba(212, 175, 55, 0.1);
             color: var(--accent-gold);
             padding: 2px 6px;
             border-radius: 4px;
             text-transform: uppercase;
+            align-self: flex-start;
         }
 
         .download-btn {
             display: block;
-            margin-top: 12px;
+            margin-top: 10px;
             padding: 8px;
             background: transparent;
             border: 1px solid var(--accent-gold);
             color: var(--accent-gold);
             text-align: center;
             text-decoration: none;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             font-weight: bold;
             text-transform: uppercase;
             border-radius: 4px;
@@ -163,6 +169,13 @@
         .download-btn:hover {
             background: var(--accent-gold);
             color: black;
+        }
+
+        /* Para telas maiores (PC), mostra mais colunas */
+        @media (min-width: 768px) {
+            .roms-grid {
+                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            }
         }
     </style>
 </head>
@@ -180,8 +193,9 @@
     </nav>
 
     <main class="content-section">
-        
+
         <h2 class="section-title" id="roms">Roms Traduzidas</h2>
+
         <div class="roms-grid">
             <div class="rom-card">
                 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgnT9KMumhVNHwRj9y6onAW56nUyZq0MVRRGFeTbB1jpLVeckZnLKtv1yGlgXrQKi4v5H1dL5SJibzyAT3qKwU4Epbp24hQDGB-RI2WrYvt3TyJxlqZiacFKTBRxs4mgguHADGNBYbYoiI/s1600/zelda.jpg" alt="Zelda" class="rom-image">
@@ -209,8 +223,24 @@
                     <a href="https://gofile.io/d/1A17mf" class="download-btn">Download .GB</a>
                 </div>
             </div>
-        </div>
 
+            <div class="rom-card">
+                <img src="https://romsportugues.com/wp-content/uploads/2018/07/Pokemon-Ruby-PTBR-GBA-300x300.webp" alt="Pokémon Ruby Version" class="rom-image">
+                <div class="rom-info">
+                    <span class="rom-title">Pokémon Ruby Version</span>
+                    <span class="rom-tag">PT-BR 100%</span>
+                    <a href="https://gofile.io/d/LpccBj" class="download-btn">Download .GB</a>
+                </div>
+            </div>
+
+            <div class="rom-card">
+                <img src="https://romsportugues.com/wp-content/uploads/2018/07/Pokemon-Leaf-Green-PTBR-GBA-300x300.webp" alt="pokemon" class="rom-image">
+                <div class="rom-info">
+                    <span class="rom-title">Leaf Green Version</span>
+                    <span class="rom-tag">PT-BR 100%</span>
+                    <a href="https://usx2f826m.mxcontent.net/d/dkor8qjwfwv847/w4n4lzsszl70a90mol5nq237rfvape0m?ab=0&r=" class="download-btn">Download .GB</a>
+                </div>
+            </div>
 
             <div class="rom-card">
                 <img src="https://romsportugues.com/wp-content/uploads/2018/07/Dragon-Ball-ADvance-GBA-PTBR-296x300.webp" alt="Dragon Ball – Advanced" class="rom-image">
@@ -220,21 +250,17 @@
                     <a href="https://gfve4dog1.mxcontent.net/d/36oqeo71bmd7oz/8kv5ickvrzzbjan1twk6z?ab=0&r=" class="download-btn">Download .GB</a>
                 </div>
             </div>
-        </div>
 
-
-           <div class="rom-card">
-                <img src="https://romsportugues.com/wp-content/uploads/2018/07/Pokemon-Leaf-Green-PTBR-GBA-300x300.webp" alt="pokemon" class="rom-image">
+            <div class="rom-card">
+                <img src="https://romsportugues.com/wp-content/uploads/2018/09/Dragon-Ball-Z-Taiketsu-PTBR-GBA-300x300.webp" alt="Dragon Ball Z Taiketsu" class="rom-image">
                 <div class="rom-info">
-                    <span class="rom-title">Leaf Green Version</span>
+                    <span class="rom-title">Dragon Ball Z Taiketsu</span>
                     <span class="rom-tag">PT-BR 100%</span>
-                    <a href="https://usx2f826m.mxcontent.net/d/dkor8qjwfwv847/w4n4lzsszl70a90mol5nq237rfvape0m?ab=0&r=" class="download-btn">Download .GB</a>
+                    <a href="https://92xseh0ry.mxcontent.net/d/8l9qo1mnajd8l4/drcgkwe0wwfce39tq3qwxnjgciflcq?ab=0&r=" class="download-btn">Download .GB</a>
                 </div>
             </div>
-        </div>
 
-
-           <div class="rom-card">
+            <div class="rom-card">
                 <img src="https://romsportugues.com/wp-content/uploads/2018/07/Donkey-Kong-GBA-PTBR-300x267.webp" alt="Donkey Kong Country" class="rom-image">
                 <div class="rom-info">
                     <span class="rom-title">Donkey Kong Country</span>
@@ -242,10 +268,8 @@
                     <a href="https://gofile.io/d/M1neXm" class="download-btn">Download .GB</a>
                 </div>
             </div>
-        </div>
 
-
-           <div class="rom-card">
+            <div class="rom-card">
                 <img src="https://romsportugues.com/wp-content/uploads/2018/07/Crash-Nitro-Kart-PTBR-GBA-300x300.webp" alt="Crash Nitro Kart " class="rom-image">
                 <div class="rom-info">
                     <span class="rom-title">Crash Nitro Kart </span>
@@ -253,10 +277,8 @@
                     <a href="https://n1sxu2vld.mxcontent.net/d/9w4xrdkwidrdn1/pgnrzx27cpie29zxqd9y7htglfb?ab=0&r=" class="download-btn">Download .GB</a>
                 </div>
             </div>
-        </div>
 
-
-           <div class="rom-card">
+            <div class="rom-card">
                 <img src="https://romsportugues.com/wp-content/uploads/2018/07/GTA-Advance-PTBR-GBA-300x300.webp" alt="GTA Advance" class="rom-image">
                 <div class="rom-info">
                     <span class="rom-title">GTA Advance</span>
@@ -264,10 +286,8 @@
                     <a href="https://gofile.io/d/3aMG6N" class="download-btn">Download .GB</a>
                 </div>
             </div>
-        </div>
 
-
-           <div class="rom-card">
+            <div class="rom-card">
                 <img src="https://romsportugues.com/wp-content/uploads/2018/07/Megaman-Bass-PTBR-GBA-300x296.webp" alt="Mega Man" class="rom-image">
                 <div class="rom-info">
                     <span class="rom-title">Mega Man</span>
@@ -275,10 +295,8 @@
                     <a href="https://gofile.io/d/2L8qOe" class="download-btn">Download .GB</a>
                 </div>
             </div>
-        </div>
 
-
-           <div class="rom-card">
+            <div class="rom-card">
                 <img src="https://romsportugues.com/wp-content/uploads/2018/07/Megaman-Zero-PTBR-GBA-300x266.webp" alt="Mega Man Zero" class="rom-image">
                 <div class="rom-info">
                     <span class="rom-title">Mega Man Zero</span>
@@ -286,10 +304,8 @@
                     <a href="https://wowroms.com/pt/roms/nintendo-gameboy-advance/download-mega-man-zero-usa/13502.html" class="download-btn">Download .GB</a>
                 </div>
             </div>
-        </div>
 
-
-           <div class="rom-card">
+            <div class="rom-card">
                 <img src="https://romsportugues.com/wp-content/uploads/2018/07/Megaman-Zero-2-PTBR-GBA-300x300.webp" alt="Mega Man Zero 2" class="rom-image">
                 <div class="rom-info">
                     <span class="rom-title">Mega Man Zero 2</span>
@@ -297,10 +313,8 @@
                     <a href="https://gofile.io/d/YGyA5z" class="download-btn">Download .GB</a>
                 </div>
             </div>
-        </div>
 
-
-           <div class="rom-card">
+            <div class="rom-card">
                 <img src="https://romsportugues.com/wp-content/uploads/2018/08/naruto-ninja-council-2-PTBR-GBA-300x300.webp" alt="Naruto Ninja Council 2" class="rom-image">
                 <div class="rom-info">
                     <span class="rom-title">Naruto Ninja Council 2</span>
@@ -308,23 +322,146 @@
                     <a href="https://gofile.io/d/diE8aX" class="download-btn">Download .GB</a>
                 </div>
             </div>
-        </div>
 
+            <div class="rom-card">
+                <img src="https://romsportugues.com/wp-content/uploads/2018/07/Crash-Bandicoot-2-N-Tranced-PTBR-GBA-298x300.webp" alt="Crash Bandicoot 2" class="rom-image">
+                <div class="rom-info">
+                    <span class="rom-title">Crash Bandicoot 2</span>
+                    <span class="rom-tag">PT-BR 100%</span>
+                    <a href="https://q2dgt5pce.mxcontent.net/d/z19jnkw1apd8qr/g4xag0wyx24r7sf3osj2?ab=0&r=" class="download-btn">Download .GB</a>
+                </div>
+            </div>
+
+            <div class="rom-card">
+                <img src="https://romsportugues.com/wp-content/uploads/2018/07/Super-Mario-Advance-2-PTBR-GBA-297x300.webp" alt="Super Mario Advance 2" class="rom-image">
+                <div class="rom-info">
+                    <span class="rom-title">Super Mario Advance 2</span>
+                    <span class="rom-tag">PT-BR 100%</span>
+                    <a href="https://a-delivery22.mxcontent.net/d/xw198g8zt9mzg/tmno0f494hodg4c4jandu?ab=0&r=" class="download-btn">Download .GB</a>
+                </div>
+            </div>
+
+            <div class="rom-card">
+                <img src="https://romsportugues.com/wp-content/uploads/2018/07/Super-Mario-Advance-PTBR-GBA-300x296.webp" alt="Super Mario Advance" class="rom-image">
+                <div class="rom-info">
+                    <span class="rom-title">Super Mario Advance</span>
+                    <span class="rom-tag">PT-BR 100%</span>
+                    <a href="https://gofile.io/d/xtHgo8" class="download-btn">Download .GB</a>
+                </div>
+            </div>
+
+            <div class="rom-card">
+                <img src="https://romsportugues.com/wp-content/uploads/2018/08/Ghost-Rider-PTBR-GBA-300x300.webp" alt="Ghost Rider" class="rom-image">
+                <div class="rom-info">
+                    <span class="rom-title">Ghost Rider</span>
+                    <span class="rom-tag">PT-BR 100%</span>
+                    <a href="https://usx2f826m.mxcontent.net/d/l7vqmgo1aqgz961/hzui8te39cdm88p33g42lr01h2c3789q?ab=0&r=" class="download-btn">Download .GB</a>
+                </div>
+            </div>
+
+            <div class="rom-card">
+                <img src="https://romsportugues.com/wp-content/uploads/2018/09/Spider-Man-Mysterios-Menace-PTBR-GBA-300x295.webp" alt="Homem Aranha" class="rom-image">
+                <div class="rom-info">
+                    <span class="rom-title">Homem Aranha</span>
+                    <span class="rom-tag">PT-BR 100%</span>
+                    <a href="https://1y04jx1s6.mxcontent.net/d/l7vq8g6rbvr98k/77rklo43j27b703o1vf?ab=0&r=" class="download-btn">Download .GB</a>
+                </div>
+            </div>
+
+            <div class="rom-card">
+                <img src="https://romsportugues.com/wp-content/uploads/2018/09/Spider-Man-2-PTBR-GBA-300x298.webp" alt="Homem Aranha 2" class="rom-image">
+                <div class="rom-info">
+                    <span class="rom-title">Homem Aranha 2</span>
+                    <span class="rom-tag">PT-BR 100%</span>
+                    <a href="https://gofile.io/d/6mUVDV" class="download-btn">Download .GB</a>
+                </div>
+            </div>
+
+            <div class="rom-card">
+                <img src="https://romsportugues.com/wp-content/uploads/2018/09/Spider-Man-3-PTBR-GBA-300x300.webp" alt="Homem Aranha 3" class="rom-image">
+                <div class="rom-info">
+                    <span class="rom-title">Homem Aranha 3</span>
+                    <span class="rom-tag">PT-BR 100%</span>
+                    <a href="https://30xplewoo.mxcontent.net/d/xw1qgr01f7vgoo/i4pmy7e9wh0380ba8v?ab=0&r=" class="download-btn">Download .GB</a>
+                </div>
+            </div>
+
+            <div class="rom-card">
+                <img src="https://romsportugues.com/wp-content/uploads/2018/09/The-Incredibles-PTBR-GBA-300x267.webp" alt="os incríveis" class="rom-image">
+                <div class="rom-info">
+                    <span class="rom-title">os incríveis</span>
+                    <span class="rom-tag">PT-BR 100%</span>
+                    <a href="https://ebij8ni1d.mxcontent.net/d/gjmkw9o3im1zgv/y1uieiwzo1bwrp3fmyjv?ab=0&r=" class="download-btn">Download .GB</a>
+                </div>
+            </div>
+
+            <div class="rom-card">
+                <img src="https://romsportugues.com/wp-content/uploads/2019/12/The-Incredibles-Rise-of-the-Underminer-PTBR-300x300.webp" alt="Os Incríveis A Ascensão do Escavador" class="rom-image">
+                <div class="rom-info">
+                    <span class="rom-title">Os Incríveis A Ascensão do Escavador</span>
+                    <span class="rom-tag">PT-BR 100%</span>
+                    <a href="https://30xplewoo.mxcontent.net/d/z19ogvxvcxw9xq/c51yxsw8beg67huoc?ab=0&r=" class="download-btn">Download .GB</a>
+                </div>
+            </div>
+
+            <div class="rom-card">
+                <img src="https://romsportugues.com/wp-content/uploads/2020/04/Harry-Potter-Collection-PTBR-GBA-300x300.webp" alt="Harry Potter Collection" class="rom-image">
+                <div class="rom-info">
+                    <span class="rom-title">Harry Potter Collection</span>
+                    <span class="rom-tag">PT-BR 100%</span>
+                    <a href="https://gfve4dog1.mxcontent.net/d/8l91o8x0c7drdr/19rjs57h8i76fpds3jm?ab=0&r=" class="download-btn">Download .GB</a>
+                </div>
+            </div>
+
+            <div class="rom-card">
+                <img src="FOTOO" alt="NOVIDADES DIA 31" class="rom-image">
+                <div class="rom-info">
+                    <span class="rom-title">EM BREVE</span>
+                    <span class="rom-tag">PT-BR 100%</span>
+                    <a href="LINK" class="download-btn">Download .GB</a>
+                </div>
+            </div>
+
+            <div class="rom-card">
+                <img src="FOTOO" alt="NOVIDADES DIA 31" class="rom-image">
+                <div class="rom-info">
+                    <span class="rom-title">EM BREVE</span>
+                    <span class="rom-tag">PT-BR 100%</span>
+                    <a href="LINK" class="download-btn">Download .GB</a>
+                </div>
+            </div>
+
+            <div class="rom-card">
+                <img src="FOTOO" alt="NOVIDADES DIA 31" class="rom-image">
+                <div class="rom-info">
+                    <span class="rom-title">EM BREVE</span>
+                    <span class="rom-tag">PT-BR 100%</span>
+                    <a href="LINK" class="download-btn">Download .GB</a>
+                </div>
+            </div>
+
+            <div class="rom-card">
+                <img src="FOTOO" alt="NOVIDADES DIA 31" class="rom-image">
+                <div class="rom-info">
+                    <span class="rom-title">EM BREVE</span>
+                    <span class="rom-tag">PT-BR 100%</span>
+                    <a href="LINK" class="download-btn">Download .GB</a>
+                </div>
+            </div>
 
         <hr style="border: 0; border-top: 1px solid var(--border); margin: 40px 0;">
 
         <h2 class="section-title" id="emuladores">Emuladores & APKs</h2>
-        <div class="roms-grid">
             
             <div class="rom-card">
                 <img src="https://myboyapke.com/wp-content/uploads/2022/11/myboy_pro_apk.png" alt="My Boy APK" class="rom-image">
                 <div class="rom-info">
                     <span class="rom-title">MY GAME BOY</span>
                     <span class="rom-tag">Versão Pro APK</span>
-                    <p style="font-size: 0.6rem; color: #666; margin: 5px 0;">Melhor emulador para Android.</p>
                     <a href="https://cdn700.onehost.io/2023/My_Boy!_-_Gba_Emulator_2.0.9_1759764474_latestmodapks.com.apk" class="download-btn">Download APK</a>
                 </div>
             </div>
+         </div>
 
             <div class="rom-card">
                 <img src="https://via.placeholder.com/160x160/111/D4AF37?text=John+GBAC" alt="John GBAC" class="rom-image">
@@ -334,6 +471,8 @@
                     <a href="#" class="download-btn">Download APK</a>
                 </div>
             </div>
+         </div>
+
 
         </div>
     </main>
