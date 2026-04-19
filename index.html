@@ -23,7 +23,9 @@
 
         .top-header {
             padding: 20px;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             border-bottom: 1px solid var(--border);
             background: linear-gradient(to bottom, #111, #050505);
         }
@@ -43,6 +45,28 @@
             margin-left: 5px;
             font-size: 0.9rem;
             border-radius: 4px;
+        }
+
+        /* Novo Botão Profissional do Instagram */
+        .social-link {
+            text-decoration: none;
+            color: #aaa;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            padding: 8px 16px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            background: transparent;
+        }
+
+        .social-link:hover {
+            color: var(--accent-gold);
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+            background: rgba(212, 175, 55, 0.05);
         }
 
         .nav-container {
@@ -192,13 +216,13 @@
 
     <div class="top-header">
         <div class="brand-name">GAME BOY<span>BR</span></div>
+        <a href="https://instagram.com/youandson" target="_blank" class="social-link">@YOUANDSON</a>
     </div>
 
     <nav class="nav-container">
         <button class="nav-item active" onclick="openTab(event, 'gba')">GBA PT-BR</button>
         <button class="nav-item" onclick="openTab(event, 'psp')">PSP ROMS</button>
         <button class="nav-item" onclick="openTab(event, 'emu')">Emuladores</button>
-        <a href="#" class="nav-item">@YOUANDSON</a>
     </nav>
 
     <div class="search-wrapper">
@@ -295,7 +319,7 @@
                     <div class="rom-info">
                         <span class="rom-title">Dragon Ball Advanced</span>
                         <span class="rom-tag">PT-BR 100%</span>
-                        <a href="#" class="download-btn">Baixar</a>
+                        <a href="https://gfve4dog1.mxcontent.net/d/36oqeo71bmd7oz/5zf3icoi7z01u35a4i6ivug1tnzz8s5?ab=0&r=" class="download-btn">Baixar</a>
                     </div>
                 </div>
                 <div class="rom-card">
@@ -303,7 +327,7 @@
                     <div class="rom-info">
                         <span class="rom-title">Dragon ball Taiketsu</span>
                         <span class="rom-tag">PT-BR 100%</span>
-                        <a href="#" class="download-btn">Baixar</a>
+                        <a href="https://a-delivery33.mxcontent.net/d/8l9qo1mnajd8l4/uzvfhp2vfieopnpd7ibz8s98gyjmlt4?ab=0&r=" class="download-btn">Baixar</a>
                     </div>
                 </div>
                 <div class="rom-card">
@@ -312,14 +336,6 @@
                         <span class="rom-title">Donkey Kong Country</span>
                         <span class="rom-tag">PT-BR 100%</span>
                         <a href="https://gofile.io/d/M1neXm" class="download-btn">Baixar</a>
-                    </div>
-                </div>
-                <div class="rom-card">
-                    <img src="https://romsportugues.com/wp-content/uploads/2018/07/Crash-Nitro-Kart-PTBR-GBA-300x300.webp" class="rom-image">
-                    <div class="rom-info">
-                        <span class="rom-title">Crash Nitro Kart</span>
-                        <span class="rom-tag">PT-BR 100%</span>
-                        <a href="#" class="download-btn">Baixar</a>
                     </div>
                 </div>
                 <div class="rom-card">
@@ -363,11 +379,19 @@
                     </div>
                 </div>
                 <div class="rom-card">
+                    <img src="https://romsportugues.com/wp-content/uploads/2018/07/Crash-Nitro-Kart-PTBR-GBA-300x300.webp" class="rom-image">
+                    <div class="rom-info">
+                        <span class="rom-title">Crash Nitro Kart</span>
+                        <span class="rom-tag">PT-BR 100%</span>
+                        <a href="https://n1sxu2vld.mxcontent.net/d/9w4xrdkwidrdn1/6dkeyzp43zduzlg?ab=0&r=" class="download-btn">Baixar</a>
+                    </div>
+                </div>
+                <div class="rom-card">
                     <img src="https://romsportugues.com/wp-content/uploads/2018/07/Crash-Bandicoot-2-N-Tranced-PTBR-GBA-298x300.webp" class="rom-image">
                     <div class="rom-info">
                         <span class="rom-title">Crash Bandicoot 2</span>
                         <span class="rom-tag">PT-BR 100%</span>
-                        <a href="#" class="download-btn">Baixar</a>
+                        <a href="https://q2dgt5pce.mxcontent.net/d/z19jnkw1apd8qr/76l5x91o0ye64f5104vv8enzo5u?ab=0&r=" class="download-btn">Baixar</a>
                     </div>
                 </div>
                 <div class="rom-card">
@@ -375,7 +399,7 @@
                     <div class="rom-info">
                         <span class="rom-title">Super Mario Advance 2</span>
                         <span class="rom-tag">PT-BR 100%</span>
-                        <a href="#" class="download-btn">Baixar</a>
+                        <a href="https://n1sxu2vld.mxcontent.net/d/xw198g8zt9mzg/gb2ppqxtja5kiolcwae?ab=0&r=" class="download-btn">Baixar</a>
                     </div>
                 </div>
                 <div class="rom-card">
@@ -386,6 +410,14 @@
                         <a href="https://gofile.io/d/xtHgo8" class="download-btn">Baixar</a>
                     </div>
                 </div>
+            <div class="rom-card">
+                <img src="https://romsportugues.com/wp-content/uploads/2024/05/Super-Mario-Land-PTBR-GB-300x268.webp" alt="Super Mario Land" class="rom-image">
+                <div class="rom-info">
+                    <span class="rom-title">Super Mario Land</span>
+                    <span class="rom-tag">PT-BR 100%</span>
+                    <a href="https://a-delivery30.mxcontent.net/d/xw1p9m8jbnk4no/ztd3574fm72hvuyww?ab=0&r=" class="download-btn">Baixar</a>
+                </div>
+            </div>
                 <div class="rom-card">
                     <img src="https://romsportugues.com/wp-content/uploads/2018/08/Ghost-Rider-PTBR-GBA-300x300.webp" class="rom-image">
                     <div class="rom-info">
@@ -443,65 +475,65 @@
                     </div>
                 </div>
             <div class="rom-card">
-                <img src="FOTOO" alt="NOME" class="rom-image">
+                <img src="https://media.istockphoto.com/id/2162995637/pt/vetorial/game-over-continue-pixel-art-8-bit-game-retro-game-for-game-assets-in-vector-illustrations.jpg?s=612x612&w=0&k=20&c=MxB4uokyd6kx8vzbImuNz9T_uG1wZDIiMHpT2NtB8Sg=" alt="NOME" class="rom-image">
                 <div class="rom-info">
-                    <span class="rom-title">NOME</span>
+                    <span class="rom-title">NOVIDADE EM BREVE</span>
                     <span class="rom-tag">PT-BR 100%</span>
                     <a href="LINK" class="download-btn">Download .GB</a>
                 </div>
             </div>
             <div class="rom-card">
-                <img src="FOTOO" alt="NOME" class="rom-image">
+                <img src="https://media.istockphoto.com/id/2162995637/pt/vetorial/game-over-continue-pixel-art-8-bit-game-retro-game-for-game-assets-in-vector-illustrations.jpg?s=612x612&w=0&k=20&c=MxB4uokyd6kx8vzbImuNz9T_uG1wZDIiMHpT2NtB8Sg=" alt="NOME" class="rom-image">
                 <div class="rom-info">
-                    <span class="rom-title">NOME</span>
+                    <span class="rom-title">NOVIDADE EM BREVE</span>
                     <span class="rom-tag">PT-BR 100%</span>
                     <a href="LINK" class="download-btn">Download .GB</a>
                 </div>
             </div>
             <div class="rom-card">
-                <img src="FOTOO" alt="NOME" class="rom-image">
+                <img src="https://media.istockphoto.com/id/2162995637/pt/vetorial/game-over-continue-pixel-art-8-bit-game-retro-game-for-game-assets-in-vector-illustrations.jpg?s=612x612&w=0&k=20&c=MxB4uokyd6kx8vzbImuNz9T_uG1wZDIiMHpT2NtB8Sg=" alt="NOME" class="rom-image">
                 <div class="rom-info">
-                    <span class="rom-title">NOME</span>
+                    <span class="rom-title">NOVIDADE EM BREVE</span>
                     <span class="rom-tag">PT-BR 100%</span>
                     <a href="LINK" class="download-btn">Download .GB</a>
                 </div>
             </div>
             <div class="rom-card">
-                <img src="FOTOO" alt="NOME" class="rom-image">
+                <img src="https://media.istockphoto.com/id/2162995637/pt/vetorial/game-over-continue-pixel-art-8-bit-game-retro-game-for-game-assets-in-vector-illustrations.jpg?s=612x612&w=0&k=20&c=MxB4uokyd6kx8vzbImuNz9T_uG1wZDIiMHpT2NtB8Sg=" alt="NOME" class="rom-image">
                 <div class="rom-info">
-                    <span class="rom-title">NOME</span>
+                    <span class="rom-title">NOVIDADE EM BREVE</span>
                     <span class="rom-tag">PT-BR 100%</span>
                     <a href="LINK" class="download-btn">Download .GB</a>
                 </div>
             </div>
             <div class="rom-card">
-                <img src="FOTOO" alt="NOME" class="rom-image">
+                <img src="https://media.istockphoto.com/id/2162995637/pt/vetorial/game-over-continue-pixel-art-8-bit-game-retro-game-for-game-assets-in-vector-illustrations.jpg?s=612x612&w=0&k=20&c=MxB4uokyd6kx8vzbImuNz9T_uG1wZDIiMHpT2NtB8Sg=" alt="NOME" class="rom-image">
                 <div class="rom-info">
-                    <span class="rom-title">NOME</span>
+                    <span class="rom-title">NOVIDADE EM BREVE</span>
                     <span class="rom-tag">PT-BR 100%</span>
                     <a href="LINK" class="download-btn">Download .GB</a>
                 </div>
             </div>
             <div class="rom-card">
-                <img src="FOTOO" alt="NOME" class="rom-image">
+                <img src="https://media.istockphoto.com/id/2162995637/pt/vetorial/game-over-continue-pixel-art-8-bit-game-retro-game-for-game-assets-in-vector-illustrations.jpg?s=612x612&w=0&k=20&c=MxB4uokyd6kx8vzbImuNz9T_uG1wZDIiMHpT2NtB8Sg=" alt="NOME" class="rom-image">
                 <div class="rom-info">
-                    <span class="rom-title">NOME</span>
+                    <span class="rom-title">NOVIDADE EM BREVE</span>
                     <span class="rom-tag">PT-BR 100%</span>
                     <a href="LINK" class="download-btn">Download .GB</a>
                 </div>
             </div>
             <div class="rom-card">
-                <img src="FOTOO" alt="NOME" class="rom-image">
+                <img src="https://media.istockphoto.com/id/2162995637/pt/vetorial/game-over-continue-pixel-art-8-bit-game-retro-game-for-game-assets-in-vector-illustrations.jpg?s=612x612&w=0&k=20&c=MxB4uokyd6kx8vzbImuNz9T_uG1wZDIiMHpT2NtB8Sg=" alt="NOME" class="rom-image">
                 <div class="rom-info">
-                    <span class="rom-title">NOME</span>
+                    <span class="rom-title">NOVIDADE EM BREVE</span>
                     <span class="rom-tag">PT-BR 100%</span>
                     <a href="LINK" class="download-btn">Download .GB</a>
                 </div>
             </div>
             <div class="rom-card">
-                <img src="FOTOO" alt="NOME" class="rom-image">
+                <img src="https://media.istockphoto.com/id/2162995637/pt/vetorial/game-over-continue-pixel-art-8-bit-game-retro-game-for-game-assets-in-vector-illustrations.jpg?s=612x612&w=0&k=20&c=MxB4uokyd6kx8vzbImuNz9T_uG1wZDIiMHpT2NtB8Sg=" alt="NOME" class="rom-image">
                 <div class="rom-info">
-                    <span class="rom-title">NOME</span>
+                    <span class="rom-title">NOVIDADE EM BREVE</span>
                     <span class="rom-tag">PT-BR 100%</span>
                     <a href="LINK" class="download-btn">Download .GB</a>
                 </div>
@@ -513,35 +545,36 @@
             <h2 class="section-title">Roms PSP</h2>
             <div class="roms-grid">
                 <div class="rom-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYjdTGka1BfvcbAxJi1PqH69h6DAyf76lX811OVGdzc4rrcEdH0kFRQDE&s=10" class="rom-image">
+                    <img src="https://romsportugues.com/wp-content/uploads/2025/01/Ben-10-Protector-of-Earth-PSP-PTBR-DUBLADO-175x300.webp" class="rom-image">
                     <div class="rom-info">
-                        <span class="rom-title">EM BREVE NOVIDADE</span>
-                        <span class="rom-tag">ISO - PT-BR</span>
-                        <a href="#" class="download-btn">Baixar ISO</a>
+                        <span class="rom-title">BEN 10</span>
+                        <span class="rom-tag">ISO - DUBLADO 🇧🇷</span>
+                        <a href="https://gofile.io/d/g2dNW4" class="download-btn">Baixar ISO</a>
                     </div>
                 </div>
+
                 <div class="rom-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYjdTGka1BfvcbAxJi1PqH69h6DAyf76lX811OVGdzc4rrcEdH0kFRQDE&s=10" class="rom-image">
+                    <img src="https://romsportugues.com/wp-content/uploads/2025/01/LEGO-Batman-PSP-PTBR-171x300.webp" class="rom-image">
                     <div class="rom-info">
-                        <span class="rom-title">EM BREVE NOVIDADE</span>
-                        <span class="rom-tag">ISO - LEGENDADO</span>
-                        <a href="#" class="download-btn">Baixar ISO</a>
+                        <span class="rom-title">LEGO Batman</span>
+                        <span class="rom-tag">ISO - LEGENDADO 🇧🇷</span>
+                        <a href="https://gofile.io/d/ONBosW" class="download-btn">Baixar ISO</a>
                     </div>
                 </div>
 <div class="rom-card">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYjdTGka1BfvcbAxJi1PqH69h6DAyf76lX811OVGdzc4rrcEdH0kFRQDE&s=10" class="rom-image">
+    <img src="https://romsportugues.com/wp-content/uploads/2022/11/LEGO-Indiana-Jones-PSP-PTBR-PSP-172x300.webp" class="rom-image">
     <div class="rom-info">
-        <span class="rom-title">EM BREVE NOVIDADE</span>
-        <span class="rom-tag">ISO - STATUS</span>
-        <a href="LINK" class="download-btn">Baixar ISO</a>
+        <span class="rom-title">LEGO Indiana Jones</span>
+        <span class="rom-tag">ISO - LEGENDADO 🇧🇷</span>
+        <a href="https://gofile.io/d/IR2BPy" class="download-btn">Baixar ISO</a>
     </div>
 </div>
 <div class="rom-card">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYjdTGka1BfvcbAxJi1PqH69h6DAyf76lX811OVGdzc4rrcEdH0kFRQDE&s=10" class="rom-image">
+    <img src="https://romsportugues.com/wp-content/uploads/2018/08/Toy-Story-3-PSP-PTBR-174x300.webp" class="rom-image">
     <div class="rom-info">
-        <span class="rom-title">EM BREVE NOVIDADE</span>
-        <span class="rom-tag">ISO - STATUS</span>
-        <a href="LINK_DE_DOWNLOAD_AQUI" class="download-btn">Baixar ISO</a>
+        <span class="rom-title">Toy Story 3</span>
+        <span class="rom-tag">ISO - LEGENDADO 🇧🇷</span>
+        <a href="https://gofile.io/d/xcDUni" class="download-btn">Baixar ISO</a>
     </div>
 </div>
 
@@ -560,11 +593,11 @@
                     </div>
                 </div>
                 <div class="rom-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYjdTGka1BfvcbAxJi1PqH69h6DAyf76lX811OVGdzc4rrcEdH0kFRQDE&s=10" class="rom-image">
+                    <img src="https://ppsspp.net/wp-content/uploads/2024/04/ppsspp-gold.webp" class="rom-image">
                     <div class="rom-info">
                         <span class="rom-title">PSP</span>
                         <span class="rom-tag">ANDROID</span>
-                        <a href="#" class="download-btn">Baixar APK</a>
+                        <a href="https://github.com/gbwatt/apks/releases/download/25.95/ppsspp-gold_1.20.2-0.apk" class="download-btn">Baixar APK</a>
                     </div>
                 </div>
             </div>
