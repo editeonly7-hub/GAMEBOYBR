@@ -21,13 +21,18 @@
             scroll-behavior: smooth;
         }
 
-        .top-header {
-            padding: 20px;
+        /* Nova Barra de Navegação Superior (Header + Menu) */
+        .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 15px 30px;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 999;
             border-bottom: 1px solid var(--border);
-            background: linear-gradient(to bottom, #111, #050505);
         }
 
         .brand-name {
@@ -47,7 +52,54 @@
             border-radius: 4px;
         }
 
-        /* Novo Botão Profissional do Instagram */
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .nav-item {
+            text-decoration: none;
+            color: #888;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+
+        .nav-item:hover {
+            color: white;
+        }
+
+        .nav-item.active {
+            color: var(--accent-gold);
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        /* Botão Profissional do WhatsApp */
+        .support-btn {
+            color: #25D366;
+            border: 1px solid rgba(37, 211, 102, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .support-btn:hover {
+            background: rgba(37, 211, 102, 0.1);
+            border-color: #25D366;
+            color: #25D366;
+            box-shadow: 0 0 10px rgba(37, 211, 102, 0.2);
+        }
+
+        /* Botão Profissional do Instagram */
         .social-link {
             text-decoration: none;
             color: #aaa;
@@ -69,47 +121,15 @@
             background: rgba(212, 175, 55, 0.05);
         }
 
-        .nav-container {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 15px 5px;
-            background: rgba(10, 10, 10, 0.9);
-            backdrop-filter: blur(10px);
-            position: sticky;
-            top: 0;
-            z-index: 999;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .nav-item {
-            text-decoration: none;
-            color: #888;
-            font-size: 0.7rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: 0.3s;
-            cursor: pointer;
-            background: none;
-            border: none;
-            padding: 5px;
-        }
-
-        .nav-item.active {
-            color: var(--accent-gold);
-            border-bottom: 2px solid var(--accent-gold);
-        }
-
         .search-wrapper {
-            padding: 15px;
+            padding: 20px 15px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .search-box {
             width: 100%;
-            padding: 12px;
+            padding: 14px;
             background: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: 8px;
@@ -122,6 +142,7 @@
 
         .search-box:focus {
             border-color: var(--accent-gold);
+            box-shadow: 0 0 8px rgba(212, 175, 55, 0.2);
         }
 
         .content-section {
@@ -156,6 +177,12 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .rom-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(212, 175, 55, 0.3);
         }
 
         .rom-image {
@@ -205,25 +232,50 @@
             font-size: 0.6rem;
             font-weight: bold;
             border-radius: 4px;
+            transition: 0.3s;
         }
 
-        @media (min-width: 768px) {
+        .download-btn:hover {
+            background: var(--accent-gold);
+            color: var(--bg-dark);
+        }
+
+        /* Responsividade para Celulares */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 15px;
+                gap: 15px;
+            }
+            .nav-menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+            .roms-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (min-width: 769px) {
             .roms-grid { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
         }
     </style>
 </head>
 <body>
 
-    <div class="top-header">
+    <header class="navbar">
         <div class="brand-name">GAME BOY<span>BR</span></div>
-        <a href="https://instagram.com/youandson" target="_blank" class="social-link">@YOUANDSON</a>
-    </div>
-
-    <nav class="nav-container">
-        <button class="nav-item active" onclick="openTab(event, 'gba')">GBA PT-BR</button>
-        <button class="nav-item" onclick="openTab(event, 'psp')">PSP ROMS</button>
-        <button class="nav-item" onclick="openTab(event, 'emu')">Emuladores</button>
-    </nav>
+        <nav class="nav-menu">
+            <button class="nav-item active" onclick="openTab(event, 'gba')">Jogos GBA</button>
+            <button class="nav-item" onclick="openTab(event, 'psp')">Jogos PSP</button>
+            <button class="nav-item" onclick="openTab(event, 'emu')">Emuladores</button>
+            
+            <a href="https://wa.me/55SEUNUMERO?text=Olá,%20gostaria%20de%20falar%20sobre%20o%20site%20e%20sugerir%20jogos!" target="_blank" class="nav-item support-btn">
+                Suporte WhatsApp
+            </a>
+            
+            <a href="https://instagram.com/youandson" target="_blank" class="social-link">@YOUANDSON</a>
+        </nav>
+    </header>
 
     <div class="search-wrapper">
         <input type="text" id="searchInput" class="search-box" placeholder="Pesquisar nesta aba..." oninput="filterGames()">
@@ -611,10 +663,19 @@
             contents.forEach(c => c.classList.remove('active'));
 
             const tabs = document.querySelectorAll('.nav-item');
-            tabs.forEach(t => t.classList.remove('active'));
+            tabs.forEach(t => {
+                // Evita que o botão de suporte perca o estilo dele caso seja clicado
+                if(!t.classList.contains('support-btn') && !t.classList.contains('social-link')){
+                    t.classList.remove('active');
+                }
+            });
 
             document.getElementById(tabId).classList.add('active');
-            evt.currentTarget.classList.add('active');
+            
+            // Adiciona classe active apenas se não for o link de suporte/instagram
+            if(!evt.currentTarget.classList.contains('support-btn') && !evt.currentTarget.classList.contains('social-link')){
+                evt.currentTarget.classList.add('active');
+            }
             
             // Limpa a pesquisa e mostra todos os jogos da nova aba
             document.getElementById('searchInput').value = "";
